@@ -1,0 +1,18 @@
+$primary-color: #0B0121;
+$secondary-color: #ececec;
+$subtitle-color: #f2f4f8;
+$text-color: $secondary-color;
+$primarybtn-txtcolor: #0b081c;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('images/hero-background.jpg');
+    background-color: $primary-color;
+    color: $text-color;
+}
