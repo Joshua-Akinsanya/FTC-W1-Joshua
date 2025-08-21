@@ -5,13 +5,11 @@ const openButton = document.querySelector("#open-menu-button");
 const navmenu = document.querySelector("#nav-menu");
 
 closeButton.addEventListener('click', function () {
-    if(window.innerWidth < 1024) {
-        navmenu.style.display = 'none';
-    }
+    navmenu.style.transform = 'translateX(100%)'
 })
 
 openButton.addEventListener('click', function () {
-    navmenu.style.display = 'flex';
+    navmenu.style.transform = 'translateX(0)';
 })
 
 })();

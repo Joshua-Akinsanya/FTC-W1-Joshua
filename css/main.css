@@ -82,7 +82,7 @@ nav {
   padding: 0 24px;
 }
 nav .nav-menu {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 24px;
   position: fixed;
@@ -94,7 +94,8 @@ nav .nav-menu {
   overflow: scroll;
   background-color: #0B0121;
   z-index: 100;
-  animation: slide-in-from-right 0.3s ease-out 0s 1;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
 }
 nav .nav-menu .menu-header {
   display: flex;
@@ -491,13 +492,5 @@ footer .copyright p {
     flex-direction: row;
     gap: 0px;
     justify-content: space-between;
-  }
-}
-@keyframes slide-in-from-right {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(0);
   }
 }/*# sourceMappingURL=main.css.map */

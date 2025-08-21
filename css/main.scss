@@ -116,7 +116,7 @@ nav {
     padding: 0 24px;
 
     .nav-menu {
-        display: none;
+        display: flex;
         flex-direction: column;
         gap: 24px;
         position: fixed;
@@ -128,7 +128,8 @@ nav {
         overflow: scroll;
         background-color: $main-color;
         z-index: 100;
-        animation: slide-in-from-right 0.3s ease-out 0s 1;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-out;
 
         .menu-header {
             @include flex(row, );
@@ -536,12 +537,4 @@ footer {
 
 @media (min-width: 3840px) {
 
-}
-
-
-// Animations
-
-@keyframes slide-in-from-right {
-    from { transform: translateX(100%);}
-    to { transform: translateX(0);}
 }
