@@ -6,55 +6,104 @@
     <title>Vaultflow</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="images/logo.png" type="image/png">
+
+    <!--Montserrat-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
 </head>
 <body>
     <nav>
-        <div>
-            <img src="images/logo.png" alt="">
-            <a href="">Vaultflow</a>
+        <div class="logo-group">
+            <img class="logo" src="images/logo.png" alt="">
+            <span class="brand">Vaultflow</span>
         </div>
-        <a href="">Features</a>
-        <a href="">Pricing</a>
-        <a href="">About Us</a>
-        <a href="">Download the app</a>
-        <a href="">Talk to an expert</a>
+
+        <div class="nav-menu">
+
+            <div class="menu-header mobile-only">
+                <div class="logo-group">
+                    <img class="logo" src="images/logo.png" alt="">
+                    <span class="brand">Vaultflow</span>
+                </div>
+                <button class="menu-button mobile-only">
+                    <!--Cross SVG !!-->
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="link-group">
+                <a class="nav-link" href="">Features</a>
+                <a class="nav-link" href="">Pricing</a>
+                <a class="nav-link" href="">About Us</a>
+            </div>
+            
+            <div class="button-group">
+                <a class="primary-button hide-on-mobile" href="">Download the app</a>
+                <a class="secondary-button" href="">Talk to an expert</a>
+            </div>
+
+        </div>
+
+        <button class="menu-button mobile-only">
+            <!--Hamburger SVG !!-->
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 12H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 18H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 6H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
     </nav>
 
     <section id="hero-section">
-        <div>
-            We just raised $20M in Series B. <a href="">Learn more</a>
+        <div class="main-intro">
+            <div class="header-pill">
+                We just raised $20M in Series B. <a href="">Learn more</a>
+            </div>
+            <h1>Modern analytics for the modern world</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                varius enim in eros elementum tristique.
+            </p>
+            <div class="button-group">
+                <button class="primary-button">Download the app</button>
+                <button class="secondary-button hide-on-mobile">Talk to an expert</button>
+            </div>
         </div>
-        <h1>Modern Analytics for the modern world</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
-        </p>
-        <div class="button-group">
-            <button>Download the app</button>
-            <button>Talk to an expert</button>
-        </div>
-        <img src="images/analytics.png" alt="" srcset="">
 
+        <div class="image-container">
+            <img class="analytics" src="images/analytics.png" alt="" srcset="">
+        </div>
     </section>
 
-    <section id="partners">
-        <span>Trusted by teams at over 1,000 of the world's leading organizations</span>
-        <div id="logos">
+    <section id="partners" class="partners">
+        <p>Trusted by teams at over 1,000 of the world's leading organizations</p>
+        <div class="partner-logos">
             <img src="logos-svg/dell-logo.svg" alt="">
             <img src="logos-svg/zendesk-logo.svg" alt="">
             <img src="logos-svg/rakuten-logo.svg" alt="">
             <img src="logos-svg/pacific-funds-logo.svg" alt="">
-            <img src="logos-svg/ncr-logo.svg" alt="">
             <img src="logos-svg/lattice-logo.svg" alt="">
+            <img src="logos-svg/ncr-logo.svg" alt="">
             <img src="logos-svg/ted-logo.svg" alt="">
         </div>
     </section>
 
     <section id="features">
-        <h1>Features that work for your future.</h1>
+        <div class="header-group">
+            <h1>Features that work for your future.</h1>
+            <p>
+                Check out our amazing features and experience the power of Vaultflow
+                for yourself.
+            </p>
+        </div>
         <div class="grid">
 
             <div class="card">
-                <img src="icons/dashboard-icon.png" alt="">
+                <img class="icon" src="icons/dashboard-icon.png" alt="">
                 <h2>Analytics Dashboard</h2>
                 <p>Our Analytics Dashboard provides a clear and intuitive
                     interface for you to easily analyze your data. From
@@ -65,7 +114,7 @@
                 <a href="">View dashboard</a>
             </div>
             <div class="card">
-                <img src="icons/tokens-icon.png" alt="">
+                <img class="icon" src="icons/tokens-icon.png" alt="">
                 <h2>Digital Credit Tokens</h2>
                 <p>Reward your customers and incentivize engagement with our
                     innovative digital credit tokens. Our tokens can be
@@ -75,59 +124,72 @@
                 </p>
                 <a href="">View tokens</a>
             </div>
-            <div class="card">
-                <img src="icons/collaboration-icon.png" alt="">
-                <h2>Code Collaboration</h2>
-                <p>Our advanced code synchronization technology ensures that
-                    your data is always up-to-date and accurate, no matter
-                    where it's coming from. Whether you're integrating data
-                    from multiple sources or working with a team of developers,
-                    our synchronization technology makes it easy to collaborate
-                    and ensure that your data is consistent and reliable.
-                </p>
-                <a href="">View code collaboration</a>
-            </div>
-            <div class="card">
-                <img src="images/code-image.png" alt="">
+            <div class="card grid-col-2">
+                <div class="col-n-1">
+                    <img class="icon" src="icons/code-icon.svg" alt="">
+                    <h2>Code Collaboration</h2>
+                    <p>Our advanced code synchronization technology ensures that
+                        your data is always up-to-date and accurate, no matter
+                        where it's coming from. Whether you're integrating data
+                        from multiple sources or working with a team of developers,
+                        our synchronization technology makes it easy to collaborate
+                        and ensure that your data is consistent and reliable.
+                    </p>
+                    <a href="">View code collaboration</a>
+                </div>
+                <div class="col-n-2">
+                    <img class="code-image" src="images/code-image.png" alt="">
+                </div>
             </div>
 
         </div>
     </section>
 
     <section id="call-to-action">
-        <h1>Our powerful analytics provides invaluable insights</h1>
-        <p>Unlock the power of data with our cutting-edge analytics product.
-            Get instant insights with our user-friendly Analytics Dashboard,
-            and take advantage of our innovative digital credit tokens to
-            reward your customers and incentivize engagement.
-        </p>
-        <button>Download the app</button>
+        <div class="card">
+            <h1>Our powerful analytics provides invaluable insights</h1>
+            <p>Unlock the power of data with our cutting-edge analytics product.
+                Get instant insights with our user-friendly Analytics Dashboard,
+                and take advantage of our innovative digital credit tokens to
+                reward your customers and incentivize engagement.
+            </p>
+            <button class="secondary-button">Download the app</button>
+        </div>
     </section>
 
     <footer>
-        <div class="footer-container">
-            <h1>Contact</h1>
-            
-            <p>Work inquires: work@vaultflow.com</p>
-            <p>PR and speaking: press@vaultflow.com</p>
-            <p>New business: newbusiness@vaultflow.com</p>
-            
-            <h1>Careers</h1>
-            <p>Careers@vaultflow.com</p>
+        <div class="info">
+            <div class="info-group">
+                <h1>Contact</h1>
+                <p>Work inquires: work@vaultflow.com</p>
+                <p>PR and speaking: press@vaultflow.com</p>
+                <p>New business: newbusiness@vaultflow.com</p>
+            </div>
 
-            <h1>Address</h1>
-            <p>398 11th Street, Floor 2</p>
-            <p>San Francisco, CA 94103</p>
+            <div class="info-group">
+                <h1>Careers</h1>
+                <p>Careers@vaultflow.com</p>
+            </div>
 
-            <h1>Social</h1>
-            <a href="">Twitter</a>
-            <a href="">Instagram</a>
-            <a href="">Tik Tok</a>
+            <div class="info-group">
+                <h1>Address</h1>
+                <p>398 11th Street, Floor 2</p>
+                <p>San Francisco, CA 94103</p>
+            </div>
 
+            <div class="info-group">
+                <h1>Social</h1>
+                <a href="">Twitter</a>
+                <a href="">Instagram</a>
+                <a href="">Tik Tok</a>
+            </div>
+        </div>
+
+        <div class="copyright">
             <p>© 2023 Vaultflow. All Rights Reserved.</p>
-            <div>
-                <img src="images/logo.png" alt="">
-                <span>Vaultflow</span>
+            <div class="logo-group">
+                <img class="logo" src="images/logo.png" alt="">
+                <span class="brand">Vaultflow</span>
             </div>
         </div>
     </footer>
