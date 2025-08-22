@@ -17,7 +17,6 @@ $shadow-color-3: #9525c9bf;
 $icon-shadow: #591dddbf;
 $footer-text-color: #939393;
 
-$padding: clamp(20px, 6.6667vw - 1.333px, 26px);
 
 @mixin flex($direction: row, $gap: 0px) {
     display: flex;
@@ -31,6 +30,7 @@ $padding: clamp(20px, 6.6667vw - 1.333px, 26px);
     padding: $pad;
     text-align: center;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 @mixin secondary-btn($border-color: $main-color-2, $txt-color: $text-color, $pad: 12px 24px) {
@@ -69,24 +69,26 @@ a {
     text-decoration: none;
 }
 button {
+    font-size: 1rem;
+    font-weight: 400;
     border: none;
     background: none;
 }
 
 
 .logo-group {
-    @include flex($gap: 10px);
+    $height: 1.375rem;
+    @include flex($gap: 0.625rem);
     align-items: center;
     color: $main-color-2;
-    width: 138px;
-    height: 22px;
-    gap: 10px;
+    width: 8.625rem;
+    height: $height;
     img.logo {
         aspect-ratio: 1/1;
-        width: 22px;
+        width: $height;
     }
     .brand {
-        font-size: 22px;
+        font-size: $height;
         line-height: 1;
         font-weight: 700 !important;
     }
@@ -95,9 +97,6 @@ button {
     display: none;
 }
 
-section {
-    padding: $padding;
-}
 .primary-button {
     @include primary-btn;
 }
@@ -113,13 +112,13 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 83px;
+    height: 5rem;
     padding: 0 24px;
 
     .nav-menu {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 1.5rem;
         position: fixed;
         top: 0;
         right: 0;
@@ -135,18 +134,17 @@ nav {
             @include flex(row, );
             justify-content: space-between;
             align-items: center;
-            height: 83px;
+            height: 5rem;
         }
 
         .link-group {
-            @include flex(column, 24px);
+            @include flex(column, 1.5rem);
             padding: 13px;
-
             a {
                 color: white;
                 font: {
                     weight: 500;
-                    size: 23px;
+                    size: 1.5rem;
                 }
             }
         }
@@ -154,7 +152,7 @@ nav {
         .button-group {
             margin-top: auto;
             @include flex(column, 12px);
-            a { font-size: 16px; }
+            a { font-size: 1rem; }
         }
     }
 
@@ -168,6 +166,11 @@ nav {
         align-items: center;
         cursor: pointer;
     }
+}
+
+$padding: clamp(20px, 100vw / 15 - 1.333px, 40px);
+section {
+    padding: $padding;
 }
 
 //Hero section
@@ -186,19 +189,19 @@ nav {
             @include secondary-btn($border-color: white, $txt-color: $subtitle-color);
             display: inline-block;
             margin: auto;
-            font-size: 12px;
+            font-size: 0.75rem;
             a:hover {
                 text-decoration: underline;
             }
         }
         h1 {
             text-align: center;
-            font-size: 43px;
+            font-size: 2.6875rem;
             font-weight: 500;
         }
         p {
             text-align: center;
-            font-size: 13px;
+            font-size: 0.8125rem;
             opacity: .65;
         }
         .button-group {
@@ -206,7 +209,6 @@ nav {
             justify-content: center;
             width: 100%;
             .primary-button {
-                font-size: 16px;
                 width: 100%;
                 max-width: 500px;
             }
@@ -215,7 +217,7 @@ nav {
 
     .image-container {
         width: 100%;
-        padding: 4px;
+        padding: calc(1vw);
 
         img.analytics {
             @include box-shadow-1;
@@ -236,17 +238,17 @@ nav {
     p {
         text-align: center;
         color: white;
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     .partner-logos {
         max-width: 100%;
-        @include flex($gap: 28px);
+        @include flex($gap: 1rem);
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: baseline;
         align-content: space-between;
         
-        img { height: 20px; }
+        img { height: 1.25rem; }
     }
 }
 
@@ -258,15 +260,12 @@ nav {
     text-align: center;
 
     h1 {
-        padding: 5px 5px 20px 5px;
-        font-size: 42px;
+        padding: 0 0 1.25rem 0;
+        font-size: 2.625rem;
         font-weight: 500;
         line-height: 1.2;
     }
-    p.header-text { 
-        font-size: 16px;
-        line-height: 1.6;
-    }
+    p.header-text { line-height: 1.6 }
     .grid {
         display: grid;
         grid-template-columns: 1fr;
@@ -274,9 +273,7 @@ nav {
 
         .grid-col-2 {
             gap: 36px;
-            .col-n-1 {
-                @include flex(column, 16px)
-            }
+            .col-n-1 { @include flex(column, 1rem) }
         }
     }
 }
@@ -285,18 +282,19 @@ nav {
     @include box-shadow-1;
     border-radius: 20px;
     padding: 30px;
-    @include flex(column, 16px);
+    @include flex(column, 1rem);
     align-items: first baseline;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%,
         rgba(255, 255, 255, 0) 100%);
     text-align: left;
     
-    h1 {
-        font-size: 26px;
+    h2 {
+        font-size: 1.625rem;
+        font-weight: 500;
         line-height: 1.3;
     }
     p {
-        font-size: 14px;
+        font-size: 0.875rem;
         line-height: 1.4;
     }
     .icon {
@@ -320,7 +318,6 @@ nav {
         border-radius: 14px;
         box-shadow: 0px -2px 7px $shadow-color;
     }
-    button { font-size: 16px }
 }
 
 //Call to Action
@@ -329,12 +326,13 @@ nav {
     padding: 60px $padding;
     
     h1, p {
+        margin: auto;
         text-align: center;
     }
     h1 {
         font: {
             weight: 700;
-            size: 30px;
+            size: 1.875rem;
         }
         line-height: 1.2;
     }
@@ -349,18 +347,19 @@ nav {
 //Footer
 
 footer {
-    padding: 5px 20px 60px 20px;
+    $side-pad: clamp(20px, 100vw * 5/72 - 13px, 40px);
+    padding: 5px $side-pad 60px $side-pad;
 
     .info-group {
         margin-bottom: 25px;
         h1 {
             padding-bottom: 10px;
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 500;
         }
         p, a {
             display: block;
-            font-size: 18px;
+            font-size: 1.125rem;
             font-weight: 300;
             margin-bottom: 5px;
         }
@@ -382,7 +381,13 @@ footer {
 
 @media (min-width: 768px) {
     
-    $padding: 40px;
+    $padding: clamp(40px, 100vw * 0.3 - 207px, 90px);
+    @mixin side-padding($pad: $padding) {
+        padding: {
+            left: $pad;
+            right: $pad;
+        }
+    }
     section {
         padding: $padding;
     }
@@ -396,15 +401,17 @@ footer {
             margin: auto;
         }
     }
-    .partners { padding: $padding }
+    .partners { @include side-padding() }
 
     #features {
-        padding: $padding;
+        @include side-padding();
         .header-group {
             max-width: 470px;
             margin: auto;
         }
-
+        .grid {
+            gap: 36px;
+        }
         .col-n-2 {
             place-self: center;
             .code-image {
@@ -435,7 +442,7 @@ footer {
     }
 
     nav {
-        height: 72px;
+        height: 5rem;
         justify-content: space-between;
         padding: 0 60px;
         .nav-menu {
@@ -456,7 +463,7 @@ footer {
                 align-items: center;
                 padding: 0;
                 a {
-                    font-size: 16px;
+                    font-size: 1rem;
                     line-height: 1.5;
                 }
             }
@@ -471,20 +478,19 @@ footer {
         padding: 100px clamp(90px, 36.1vw - 279px, 400px);
         .main-intro {
             .header-pill {
-                font-size: 16px;
+                font-size: 1rem;
             }
             h1 {
-                font-size: 80px;
+                font-size: 5rem;
             }
             p {
-                font-size: 18px;
+                font-size: 1.125rem;
             }
             .button-group {
                 @include flex(row,16px);
                 width: auto;
                 .primary-button {
                     width:auto;
-                    font-size: 16px;
                     line-height: 1.5;
                 }
             }
@@ -497,7 +503,7 @@ footer {
 
     .partners {
         padding: 60px;
-        p { font-size: 20px; }
+        p { font-size: 1.25rem; }
         .partner-logos {
             justify-content: center;
         }
@@ -509,8 +515,8 @@ footer {
         .header-group {
             background-image: url('../images/transparent-blur.png');
             background-size: 100% 100%;
-            h1 { font-size: 48px }
-            p { font-size: 18px }
+            h1 { font-size: 3rem }
+            p { font-size: 1.125rem }
         }
         .grid {
             grid-template-columns: 1fr 1fr;
@@ -523,7 +529,7 @@ footer {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr;
                 .col-n-1 {
-                    @include flex(column, 16px);
+                    @include flex(column, 1rem);
                 }
             }
         }
@@ -538,11 +544,11 @@ footer {
         .card {
             padding: 60px 120px;
             h1 {
-                font-size: 48px;
+                font-size: 3rem;
                 line-height: 1.2;
             }
             p {
-                font-size: 18px;
+                font-size: 1.125rem;
                 line-height: 1.5;
             }
         }
@@ -554,7 +560,7 @@ footer {
         .info {
             padding-right: 200px;
             height: 300px;
-            @include flex(column, 40px);
+            @include flex(column, 32px);
             flex-wrap: wrap;
             .info-group {
                 margin: 0;
@@ -566,11 +572,5 @@ footer {
             justify-content: space-between;
         }
     }
-
-}
-
-//4K
-
-@media (min-width: 3840px) {
 
 }
