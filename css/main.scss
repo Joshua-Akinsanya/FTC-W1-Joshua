@@ -401,11 +401,9 @@ footer {
     #features {
         padding: $padding;
         .header-group {
-            position: relative;
             max-width: 470px;
             margin: auto;
             background-image: url('../images/transparent-blur.png');
-            z-index: 10;
         }
 
         .col-n-2 {
@@ -471,7 +469,7 @@ footer {
     }
 
     #hero-section {
-        padding: 40px;
+        padding: 100px clamp(90px, 36.1vw - 279px, 400px);
         .main-intro {
             .header-pill {
                 font-size: 16px;
@@ -493,7 +491,8 @@ footer {
             }
         }
         .image-container {
-            padding: 40px;
+            padding: 0;
+            max-width: 100%;
         }
     }
 
@@ -507,6 +506,7 @@ footer {
 
     #features {
         padding: 60px;
+        gap: 100px;
         h1 { font-size: 48px }
         p { font-size: 18px }
         .grid {
@@ -531,7 +531,7 @@ footer {
     }
 
     #call-to-action {
-        padding: 60px;
+        padding: 100px;
         .card {
             padding: 60px 120px;
             h1 {
@@ -547,11 +547,15 @@ footer {
 
     footer {
         padding: 64px;
-
+        display: block;
         .info {
             padding-right: 200px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            height: 300px;
+            @include flex(column, 40px);
+            flex-wrap: wrap;
+            .info-group {
+                margin: 0;
+            }
         }
 
         .copyright {

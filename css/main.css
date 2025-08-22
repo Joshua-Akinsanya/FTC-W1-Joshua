@@ -370,11 +370,9 @@ footer .copyright p {
     padding: 40px;
   }
   #features .header-group {
-    position: relative;
     max-width: 470px;
     margin: auto;
     background-image: url("../images/transparent-blur.png");
-    z-index: 10;
   }
   #features .col-n-2 {
     place-self: center;
@@ -435,7 +433,7 @@ footer .copyright p {
     margin: 0;
   }
   #hero-section {
-    padding: 40px;
+    padding: 100px clamp(90px, 36.1vw - 279px, 400px);
   }
   #hero-section .main-intro .header-pill {
     font-size: 16px;
@@ -458,7 +456,8 @@ footer .copyright p {
     line-height: 1.5;
   }
   #hero-section .image-container {
-    padding: 40px;
+    padding: 0;
+    max-width: 100%;
   }
   .partners {
     padding: 60px;
@@ -471,6 +470,7 @@ footer .copyright p {
   }
   #features {
     padding: 60px;
+    gap: 100px;
   }
   #features h1 {
     font-size: 48px;
@@ -499,7 +499,7 @@ footer .copyright p {
     padding: 60px;
   }
   #call-to-action {
-    padding: 60px;
+    padding: 100px;
   }
   #call-to-action .card {
     padding: 60px 120px;
@@ -514,11 +514,18 @@ footer .copyright p {
   }
   footer {
     padding: 64px;
+    display: block;
   }
   footer .info {
     padding-right: 200px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  footer .info .info-group {
+    margin: 0;
   }
   footer .copyright {
     display: flex;
