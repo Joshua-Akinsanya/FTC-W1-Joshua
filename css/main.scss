@@ -403,7 +403,6 @@ footer {
         .header-group {
             max-width: 470px;
             margin: auto;
-            background-image: url('../images/transparent-blur.png');
         }
 
         .col-n-2 {
@@ -507,8 +506,12 @@ footer {
     #features {
         padding: 60px;
         gap: 100px;
-        h1 { font-size: 48px }
-        p { font-size: 18px }
+        .header-group {
+            background-image: url('../images/transparent-blur.png');
+            background-size: 100% 100%;
+            h1 { font-size: 48px }
+            p { font-size: 18px }
+        }
         .grid {
             grid-template-columns: 1fr 1fr;
             gap: 40px 24px;

@@ -372,7 +372,6 @@ footer .copyright p {
   #features .header-group {
     max-width: 470px;
     margin: auto;
-    background-image: url("../images/transparent-blur.png");
   }
   #features .col-n-2 {
     place-self: center;
@@ -472,10 +471,14 @@ footer .copyright p {
     padding: 60px;
     gap: 100px;
   }
-  #features h1 {
+  #features .header-group {
+    background-image: url("../images/transparent-blur.png");
+    background-size: 100% 100%;
+  }
+  #features .header-group h1 {
     font-size: 48px;
   }
-  #features p {
+  #features .header-group p {
     font-size: 18px;
   }
   #features .grid {
