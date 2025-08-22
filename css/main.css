@@ -49,7 +49,7 @@ button {
 }
 
 section {
-  padding: clamp(20px, 6.6667vw - 1.333px, 30px);
+  padding: clamp(20px, 6.6667vw - 1.333px, 26px);
 }
 
 .primary-button {
@@ -184,6 +184,7 @@ nav button.menu-button {
   width: 100%;
 }
 #hero-section .main-intro .button-group .primary-button {
+  font-size: 16px;
   width: 100%;
   max-width: 500px;
 }
@@ -202,7 +203,7 @@ nav button.menu-button {
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  padding: clamp(20px, 6.6667vw - 1.333px, 30px);
+  padding: clamp(20px, 6.6667vw - 1.333px, 26px);
 }
 .partners p {
   text-align: center;
@@ -231,18 +232,22 @@ nav button.menu-button {
   text-align: center;
 }
 #features h1 {
-  padding: 5px;
+  padding: 5px 5px 20px 5px;
   font-size: 42px;
   font-weight: 500;
   line-height: 1.2;
 }
+#features p.header-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
 #features .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 30px;
 }
 #features .grid .grid-col-2 {
-  gap: 32px;
+  gap: 36px;
 }
 #features .grid .grid-col-2 .col-n-1 {
   display: flex;
@@ -278,6 +283,7 @@ nav button.menu-button {
 }
 .card a {
   margin-top: auto;
+  padding-top: 10px;
   text-decoration: underline;
   color: white;
   font-weight: 500;
@@ -290,9 +296,12 @@ nav button.menu-button {
   box-shadow: 0px -2px 27px rgba(187, 155, 255, 0.1490196078);
   box-shadow: 0px -2px 7px rgba(233, 223, 255, 0.3019607843);
 }
+.card button {
+  font-size: 16px;
+}
 
 #call-to-action {
-  padding: 60px clamp(20px, 6.6667vw - 1.333px, 30px);
+  padding: 60px clamp(20px, 6.6667vw - 1.333px, 26px);
 }
 #call-to-action h1, #call-to-action p {
   text-align: center;
@@ -310,7 +319,7 @@ nav button.menu-button {
 }
 
 footer {
-  padding: 60px 20px;
+  padding: 5px 20px 60px 20px;
 }
 footer .info-group {
   margin-bottom: 25px;
@@ -318,6 +327,7 @@ footer .info-group {
 footer .info-group h1 {
   padding-bottom: 10px;
   font-size: 24px;
+  font-weight: 500;
 }
 footer .info-group p, footer .info-group a {
   display: block;
@@ -329,9 +339,10 @@ footer .info-group a:hover {
   text-decoration: underline;
 }
 footer .copyright {
+  padding-top: 10px;
   display: flex;
   flex-direction: column-reverse;
-  gap: 7px;
+  gap: 13px;
   align-items: center;
 }
 footer .copyright p {

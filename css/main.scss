@@ -17,7 +17,7 @@ $shadow-color-3: #9525c9bf;
 $icon-shadow: #591dddbf;
 $footer-text-color: #939393;
 
-$padding: clamp(20px, 6.6667vw - 1.333px, 30px);
+$padding: clamp(20px, 6.6667vw - 1.333px, 26px);
 
 @mixin flex($direction: row, $gap: 0px) {
     display: flex;
@@ -206,6 +206,7 @@ nav {
             justify-content: center;
             width: 100%;
             .primary-button {
+                font-size: 16px;
                 width: 100%;
                 max-width: 500px;
             }
@@ -257,18 +258,22 @@ nav {
     text-align: center;
 
     h1 {
-        padding: 5px;
+        padding: 5px 5px 20px 5px;
         font-size: 42px;
         font-weight: 500;
         line-height: 1.2;
     }
+    p.header-text { 
+        font-size: 16px;
+        line-height: 1.6;
+    }
     .grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 30px;
 
         .grid-col-2 {
-            gap: 32px;
+            gap: 36px;
             .col-n-1 {
                 @include flex(column, 16px)
             }
@@ -303,6 +308,7 @@ nav {
     }
     a {
         margin-top: auto;
+        padding-top: 10px;
         text-decoration: underline;
         color: white;
         font-weight: 500;
@@ -315,6 +321,7 @@ nav {
         box-shadow: 0px -2px 27px $shadow-color-2;
         box-shadow: 0px -2px 7px $shadow-color;
     }
+    button { font-size: 16px }
 }
 
 //Call to Action
@@ -343,13 +350,14 @@ nav {
 //Footer
 
 footer {
-    padding: 60px 20px;
+    padding: 5px 20px 60px 20px;
 
     .info-group {
         margin-bottom: 25px;
         h1 {
             padding-bottom: 10px;
             font-size: 24px;
+            font-weight: 500;
         }
         p, a {
             display: block;
@@ -361,7 +369,8 @@ footer {
     }
 
     .copyright {
-        @include flex(column-reverse, 7px);
+        padding-top: 10px;
+        @include flex(column-reverse, 13px);
         align-items: center;
         p { 
             font-weight: 300;
