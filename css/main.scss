@@ -190,6 +190,7 @@ section {
             display: inline-block;
             margin: auto;
             font-size: 0.75rem;
+            cursor: default;
             a:hover {
                 text-decoration: underline;
             }
@@ -198,6 +199,12 @@ section {
             text-align: center;
             font-size: 2.6875rem;
             font-weight: 500;
+            background: linear-gradient(to bottom, rgba(236, 236, 236, 1),
+                            rgba(236, 236, 236, 0.65));
+            /* Transparency gradient on text */
+            -webkit-background-clip: text; // For Chrome, Safari
+            background-clip: text; // For Firefox
+            -webkit-text-fill-color: transparent;
         }
         p {
             text-align: center;
@@ -230,7 +237,7 @@ section {
 
 //partners
 
-.partners {
+#partners {
     @include flex(column, 40px);
     align-items: center;
     padding: $padding;
@@ -401,7 +408,7 @@ footer {
             margin: auto;
         }
     }
-    .partners { @include side-padding() }
+    #partners { @include side-padding() }
 
     #features {
         @include side-padding();
@@ -501,7 +508,7 @@ footer {
         }
     }
 
-    .partners {
+    #partners {
         padding: 60px;
         p { font-size: 1.25rem; }
         .partner-logos {
